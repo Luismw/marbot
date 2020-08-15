@@ -1,0 +1,36 @@
+$cssCore: false;
+$cssHelpers: true;
+
+// Variables para los colores
+
+// Colores generales
+$negro:      	#000000;
+$negro2:        #333333;
+$blanco:     	#ffffff;
+$text:       	#666666;
+$plomo : 		#F4F4F4; 
+
+// Colores de la paleta 
+$first-color:  #00A0D2;
+$second-color: #00A0D2;
+ 
+// Fuentes
+$font-primary: 'DM Sans', sans-serif;
+
+
+// Añadir librerias base para el funcionamiento y diseño del sitio web
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/hamburgers/hamburgers';
+
+// Importando Framework EDgrid
+@import 'edgrid/ed-grid';
+
+//Librerias extras
+@import 'base/slick';
+
+// Archivos dev
+@import 'dev/globals';
+@import 'dev/header';
+@import 'dev/home';
+@import 'dev/footer';
