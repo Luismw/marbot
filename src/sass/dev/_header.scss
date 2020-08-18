@@ -1,0 +1,85 @@
+.main-header{
+    background-color: $blanco;
+    padding: 15px 0;
+    position: fixed;
+    transition: all .3s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    &.scroll{
+        padding: 10px 0;
+        box-shadow: 0 0 3px rgba($text,.1);
+    }
+    .container{
+        .item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .main-logo{
+                img{
+                    max-width: 190px;
+                }
+            }
+            .main-nav{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                &__toggle{
+                    display: none;
+                }
+
+                .main-menu{
+                    display: flex;
+                    align-items: center;
+
+                    &__item{
+                        .link{
+                            color: $text;
+                            margin: 0 20px;
+                            font-size: 17px;
+                            font-weight: 600;
+                            transition: all .5s;
+
+                            &.active,
+                            &:hover{
+                                color: $first-color;
+                            }
+                        }
+                    }
+                }
+
+                .btn-whatsapp{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 100%;
+                    max-width: 190px;
+                    margin-left: 20px;
+
+                    .icon{
+                        max-width: 50px;
+                    }
+                    .text{
+                        color: $text;
+                        font-size: 14px;
+                        line-height: 1.2;
+                        padding-left: 5px;
+                        
+                        span{
+                            text-align: center;
+                            display: block;
+                            color: $negro2;
+                            font-size: 27px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 ::selection {
-    background: $first-color;
+    background-color: $first-color;
     color: $blanco;
     text-shadow: none;
 }
@@ -8,17 +8,152 @@
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: rgba($text,.1);
+    background-color: rgba($text,.1);
 }
  
 ::-webkit-scrollbar-thumb {
-    background: rgba($text,.2);
+    background-color: rgba($text,.2);
 }
  
 ::-webkit-scrollbar-button {
-    // background: rgba($text,.8);
+    // background-color: rgba($text,.8);
 }
 
 .bold{
     font-weight: bold;
+}
+.first-color{
+    color: $first-color;
+}
+.second-color{
+    color: $second-color;
+}
+.third-color{
+    color: $third-color;
+}
+.fourth-color{
+    color: $fourth-color;
+}
+.fifth-color{
+    color: $fifth-color;
+}
+
+.recent-works{
+    .container{
+        .item{
+            position: relative;
+
+            > .title{
+                text-align: center;
+                position: relative;
+                padding-bottom: 20px;
+                font-size: 35px;
+                color: $fifth-color;
+                font-weight: 600;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 5px;
+                    width: 120px;
+                    background-color: $first-color;
+                }
+            }
+            .swiper-container{
+                padding-top: 30px;
+
+                .arrows{
+                    position: absolute;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80px;
+
+                    .swiper-button-next, 
+                    .swiper-button-prev {
+                        position: absolute;
+                        top: 0;
+                        width: auto;
+                        height: auto;
+                        margin-top: 0;
+                        background: none;
+                        font-size: 30px;
+                        font-weight: normal;
+                        color: rgba($text,.5);
+
+                        &:before{
+                            font-family: 'Flaticon';
+                        }
+                    }
+                    .swiper-button-prev{
+                        left: 0;
+
+                        &:before{
+                            content: $font-Flaticon-flecha-izquierda;
+                        }
+                    }
+                    .swiper-button-next{
+                        right: 0;
+
+                        &:before{
+                            content: $font-Flaticon-flecha-correcta;
+                        }
+                    }
+                }
+
+                .carousel{
+                    margin-top: 50px;
+
+                    &__item{
+                        padding: 15px;
+
+                        a{
+                            outline: none;
+                            position: relative;
+                            width: 100%;
+                            height: 400px;
+                            display: block;
+                            overflow: hidden;
+                            transition: all .3s;
+                            box-shadow: 0 0 5px rgba($text,.1);
+
+                            &:before{
+                                content: $font-Flaticon-anadir;
+                                position: absolute;
+                                font-family: 'Flaticon';
+                                width: 100%;
+                                height: 100%;
+                                left: 0;
+                                top: 0;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 25px;
+                                color: $blanco;
+                                transition: all .3s;
+                                background-color: rgba($negro,.4);
+                                opacity: 0;
+                            }
+
+                            &:hover{
+                                &:before{
+                                    opacity: 1;
+                                }
+                            }
+            
+                            img{
+                                object-fit: cover;
+                                object-position: top;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,153 @@
+.about-us{
+    .main-wrap{
+        margin-top: 80px;
+
+        .about{
+            padding: 80px 0 60px 0;
+            max-width: 900px;
+            margin: 0 auto;
+
+            .title{
+                text-align: center;
+                position: relative;
+                padding-bottom: 20px;
+                font-size: 38px;
+                color: $fifth-color;
+                font-weight: 600;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 5px;
+                    width: 120px;
+                    background-color: $first-color;
+                }
+            }
+            .description{
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+        .digital-transformation{
+            padding: 40px 0 80px 0;
+            position: relative;
+
+            &:before{
+                content: "";
+                background-image: url("../img/partials/partial-3.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left;
+                position: absolute;
+                right: 0;
+                top: -80px;
+                height: 100%;
+                width: 100%;
+                max-width: 120px;
+            }
+            
+            .container{
+                .item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+
+                    .wrap-image{
+                        width: 100%;
+                        max-width: 500px;
+                        position: relative;
+
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            width: 95%;
+                            height: 95%;
+                            z-index: -1;
+                            background-color: $first-color;
+                            bottom: -16px;
+                            right: -16px;
+                        }
+                        
+                    }
+                    .copy{
+                        padding-left: 50px;
+
+                        .title{
+                            font-size: 35px;
+                            color: $fifth-color;
+                            max-width: 450px;
+                            font-weight: 600;
+
+                            span{
+                                display: block;
+                                font-size: 40px;
+                            }
+                        }
+                        .wrap-description{
+                            max-width: 550px;
+                            margin-top: 30px;
+                            padding-right: 1em;
+
+                            p{
+                                margin-bottom: 15px;
+                                position: relative;
+                                padding-left: 15px;
+                                font-size: 17px;
+
+                                &:before{
+                                    content: "";
+                                    width: 5px;
+                                    height: 80%;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 10%;
+                                    background-color: $first-color;
+                                }
+
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .relationship-building{
+            padding: 40px 0 60px 0;
+            max-width: 650px;
+            margin: 0 auto;
+
+            .title{
+                text-align: center;
+                position: relative;
+                padding-bottom: 20px;
+                font-size: 35px;
+                color: $fifth-color;
+                font-weight: 600;
+
+                &:before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 5px;
+                    width: 120px;
+                    background-color: $first-color;
+                }
+            }
+            .description{
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+        .recent-works{
+            padding: 50px 0 80px 0;
+        }
+    }
+}

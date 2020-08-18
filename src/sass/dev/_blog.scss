@@ -1,0 +1,97 @@
+.blog{
+    .main-wrap{
+        margin-top: 80px;
+
+        .posts{
+            padding: 80px 0 80px 0;
+
+            .container{
+                .item{
+                    > .title{
+                        text-align: center;
+                        position: relative;
+                        padding-bottom: 20px;
+                        font-size: 35px;
+                        color: $fifth-color;
+                        font-weight: 600;
+
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 5px;
+                            width: 120px;
+                            background-color: $first-color;
+                        }
+                    }
+                    .grid{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 40px;
+                        width: 100%;
+
+                        &__item{
+                            width: calc(33.33% - 20px);
+                            margin: 10px;
+                            padding: 10px 10px 20px 10px;
+                            transition: all .3s;
+                            display: flex;
+                            flex-direction: column;
+
+                            .post-image{
+                                width: 100%;
+                                height: 250px;
+                                position: relative;
+
+                                img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                                .category{
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    background-color: $first-color;
+                                    color: $blanco;
+                                    text-transform: uppercase;
+                                    font-size: 12px;
+                                    padding: 6px 15px;
+                                }
+                            }
+                            .title{
+                                color: $fifth-color;
+                                margin-top: 20px;
+                                font-weight: 600;
+                                font-size: 17px;
+                            }
+                            .excerpt{
+                                margin: 15px 0 15px 0;
+                                font-weight: 300;
+                            }
+                            .btn{
+                               display: table;
+                               margin-right: auto;
+                               margin-top: auto;
+                               border: 1px solid $first-color;
+                               color: $first-color;
+                               padding: 4px 20px;
+                               border-radius: 5px; 
+                               font-weight: 600;
+                               transition: all .3s;
+                               font-size: 15px;
+
+                               &:hover{
+                                   background-color: $first-color;
+                                   color: $blanco;
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

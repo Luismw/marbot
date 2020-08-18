@@ -1,3 +1,122 @@
 .main-footer{
-    
+    padding: 100px 0 0 0;
+    @include stickyFooter();
+
+    .widgets.container{
+        padding-bottom: 50px;
+
+        .item{
+            display: flex;
+            justify-content: space-between;
+
+            .widget{
+                margin: 0 20px;
+
+                &.marbot{
+                    max-width: 400px;
+                }
+
+                .logo{
+                    max-width: 180px;
+                }
+                .description{
+                    margin-top: 20px;
+                    font-weight: 300;
+                }
+                .title{
+                    font-size: 26px;
+                    color: $first-color;
+                    font-weight: 600;
+                    margin-bottom: 25px;
+                    padding-bottom: 12px;
+                    position: relative;
+
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        height: 4px;
+                        width: 70px;
+                        background-color: $first-color;
+                    }
+                }
+                .list-menu{
+                    li{
+                        a{
+                            color: $text;
+                            transition: all .3s;
+                            margin-bottom: 5px;
+                            display: block;
+                            font-weight: 300;
+
+                            &:hover{
+                                color: $first-color;
+                            }
+                        }
+                        &:last-child a{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .links{
+                    a{
+                        color: $text;
+                        transition: all .3s;
+                        margin-bottom: 5px;
+                        display: block;
+                        font-weight: 300;
+
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+
+                        &:hover{
+                            color: $first-color;
+                        }
+                    }
+                }
+                .social{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+
+                    a{
+                        transition: all .3s;
+
+                        &:hover{
+                            margin-top: -8px;
+                        }
+                        &:before{
+                            font-family: 'Flaticon';
+                            font-size: 32px;
+                            color: $first-color;
+                        }
+                        &.fb{
+                            &:before{
+                                content: $font-Flaticon-facebook;
+                            }
+                        }
+                        &.ig{
+                            margin-left: 20px;
+
+                            &:before{
+                                content: $font-Flaticon-instagram;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .copyright{
+        padding: 35px 1em;
+        background-color: $first-color;
+
+        p{
+            color: $blanco;
+            text-align: center;
+            font-weight: 300;
+        }
+    }
 }

@@ -8,14 +8,15 @@ $negro:      	#000000;
 $negro2:        #333333;
 $blanco:     	#ffffff;
 $text:       	#666666;
-$plomo : 		#F4F4F4; 
+$plomo : 		#F8F8F8; 
 
 // Colores de la paleta 
-$first-color:  #00A0D2;
-$second-color: #00A0D2;
- 
-// Fuentes
-$font-primary: 'DM Sans', sans-serif;
+$first-color:  #590BFE;
+$second-color: #00CAD3;
+$third-color:  #260587;
+$fourth-color: #7A4DF9;
+$fifth-color:  #0F142F;
+$sixth-color:  #FF075A;
 
 
 // Añadir librerias base para el funcionamiento y diseño del sitio web
@@ -27,10 +28,17 @@ $font-primary: 'DM Sans', sans-serif;
 @import 'edgrid/ed-grid';
 
 //Librerias extras
-@import 'base/slick';
+@import 'base/fancybox';
+@import 'base/swiper';
 
 // Archivos dev
 @import 'dev/globals';
 @import 'dev/header';
 @import 'dev/home';
+@import 'dev/services';
+@import 'dev/service-detail';
+@import 'dev/about-us';
+@import 'dev/contact';
+@import 'dev/blog';
+@import 'dev/single';
 @import 'dev/footer';

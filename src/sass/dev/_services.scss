@@ -1,0 +1,164 @@
+.services{
+    .main-wrap{
+        margin-top: 80px;
+
+        .our-services{
+            padding: 80px 0 80px 0;
+
+            .container{
+                .item{
+                    > .title{
+                        text-align: center;
+                        position: relative;
+                        padding-bottom: 20px;
+                        font-size: 35px;
+                        color: $fifth-color;
+                        font-weight: 600;
+
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 5px;
+                            width: 120px;
+                            background-color: $first-color;
+                        }
+                    }
+                    .description{
+                        max-width: 900px;
+                        text-align: center;
+                        margin: 50px auto 50px auto;
+                    }
+                    .grid{
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        &__item{
+                            width: calc(33.33% - 20px);
+                            margin: 10px;
+                            background-color: $plomo;
+
+                            .image{
+                                width: 100%;
+                            }
+                            .title{
+                                color: $fifth-color;
+                                margin-top: 20px;
+                                text-align: center;
+                                font-weight: 600;
+                                font-size: 17px;
+                            }
+                            .btn{
+                               display: table;
+                               margin: 20px auto 25px auto;
+                               border: 1px solid $first-color;
+                               color: $first-color;
+                               padding: 2px 30px;
+                               border-radius: 5px; 
+                               font-weight: 600;
+                               transition: all .3s;
+
+                               &:hover{
+                                   background-color: $first-color;
+                                   color: $blanco;
+                               }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .form-project{
+            padding: 0 0 50px 0;
+            .container{
+                position: relative;
+
+                &:before{
+                    content: "";
+                    background-image: url("../img/partials/partial-4.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    left: 30px;
+                    top: 100px;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 80px;
+                }
+                .item{
+                    > .title{
+                        text-align: center;
+                        position: relative;
+                        padding-bottom: 20px;
+                        font-size: 35px;
+                        margin-bottom: 40px;
+                        color: $fifth-color;
+                        font-weight: 600;
+
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 5px;
+                            width: 120px;
+                            background-color: $first-color;
+                        }
+                    }
+                    .form{
+                        max-width: 500px;
+                        margin: 0 auto;
+
+                        .input-wrap{
+                            margin: 0 5px;
+                            margin-bottom: 15px;
+
+                            input,
+                            textarea{
+                                width: 100%;
+                                border-radius: 5px;
+                                outline: none;
+                                border: 1px solid rgba($text,.3);
+                                font-family: "campton";
+                                font-size: 16px;
+                                color: $text;
+                                padding: 10px 15px;
+
+                                &::placeholder{
+                                    opacity: .5;
+                                }
+                            }
+                            textarea{
+                                height: 80px;
+                                resize: none;
+                            }
+                            .button{
+                                color: $blanco;
+                                background-color: $first-color;
+                                border-color: $first-color;
+                                cursor: pointer;
+                                transition: all .3s;
+
+                                &:hover{
+                                    background-color: darken($first-color, 15%);
+                                }
+                            }
+                        }
+                        .flex{
+                            display: flex;
+                            margin-bottom: 15px;
+
+                            .input-wrap{
+                                width: calc(50% - 10px);
+                                margin: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
