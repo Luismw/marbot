@@ -51,6 +51,13 @@
                 color: $fifth-color;
                 font-weight: 600;
 
+                @include to(md){
+                    font-size: 30px;
+                }
+                @include to(m){
+                    font-size: 26px;
+                }
+
                 &:before{
                     content: "";
                     position: absolute;

@@ -21,6 +21,13 @@
             .main-logo{
                 img{
                     max-width: 190px;
+
+                    @include to(md){
+                        max-width: 170px;
+                    }
+                    @include to(m){
+                        max-width: 160px;
+                    }
                 }
             }
             .main-nav{
@@ -31,13 +38,50 @@
 
                 &__toggle{
                     display: none;
+
+                    @include to(l){
+                        display: block;
+                        order: 2;
+                        margin-top: 10px;
+                    }
                 }
 
                 .main-menu{
                     display: flex;
                     align-items: center;
 
+                    @include to(l){
+                        position: absolute;
+                        right: -300px;
+                        top: 100%;
+                        flex-direction: column;
+                        order: 1;
+                        background: $blanco;
+                        min-width: 300px;
+                        opacity: 0;
+                        transition: all .8s;
+
+                        &.active{
+                            opacity: 1;
+                            right: 0;
+                        }
+                    }
+                    @include to(m){
+                        min-width: 100%;
+                        padding: 0 50px;
+                        right: -100%;
+                    }
+
                     &__item{
+                        @include to(l){
+                            padding: 12px 0;
+                            border-top: 1px solid rgba($text,.1);
+                            width: 100%;
+
+                            &:last-child{
+                                border-bottom: 0;
+                            }
+                        }
                         .link{
                             color: $text;
                             margin: 0 20px;
@@ -45,15 +89,53 @@
                             font-weight: 600;
                             transition: all .5s;
 
+                            @include to(l){
+                                text-align: center;
+                                display: block;
+                            }
+
                             &.active,
                             &:hover{
                                 color: $first-color;
                             }
                         }
+                        &.ws{
+                            display: none;
+
+                            @include to(m){
+                                display: block;
+                            }
+
+                            .btn-whatsapp{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+
+                                .icon{
+                                    max-width: 30px;
+                                }
+                                .text{
+                                    color: $text;
+                                    font-size: 13px;
+                                    line-height: 1.2;
+                                    padding-left: 5px;
+                                    
+                                    span{
+                                        text-align: center;
+                                        display: block;
+                                        color: $negro2;
+                                        font-size: 24px;
+                                        font-weight: 600;
+                                        letter-spacing: .5px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
-                .btn-whatsapp{
+                > .btn-whatsapp{
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
@@ -61,14 +143,33 @@
                     max-width: 190px;
                     margin-left: 20px;
 
+                    @include to(l){
+                        margin-right: 50px;
+                        margin-left: 0;
+                    }
+                    @include to(600px){
+                        margin-right: 35px;
+                    }
+                    @include to(m){
+                        display: none;
+                    }
+
                     .icon{
                         max-width: 50px;
+
+                        @include to(md){
+                            max-width: 40px;
+                        }
                     }
                     .text{
                         color: $text;
                         font-size: 14px;
                         line-height: 1.2;
                         padding-left: 5px;
+
+                        @include to(md){
+                            font-size: 13px;
+                        }
                         
                         span{
                             text-align: center;
@@ -76,6 +177,10 @@
                             color: $negro2;
                             font-size: 27px;
                             font-weight: 600;
+
+                            @include to(md){
+                                font-size: 24px;
+                            }
                         }
                     }
                 }

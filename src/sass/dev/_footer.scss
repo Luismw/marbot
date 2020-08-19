@@ -9,11 +9,27 @@
             display: flex;
             justify-content: space-between;
 
+            @include to(850px){
+                flex-direction: column;
+            }
+
             .widget{
                 margin: 0 20px;
 
+                @include to(850px){
+                    margin: 0 0 20px 0;
+
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+
                 &.marbot{
                     max-width: 400px;
+
+                    @include to(850px){
+                        max-width: 100%;
+                    }
                 }
 
                 .logo{
@@ -112,6 +128,10 @@
     .copyright{
         padding: 35px 1em;
         background-color: $first-color;
+
+        @include to(md){
+            padding: 20px 1em;
+        }
 
         p{
             color: $blanco;

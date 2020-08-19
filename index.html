@@ -42,6 +42,12 @@
 							<li class="main-menu__item">
 								<a href="blog.html" class="link">Blog</a>
 							</li>
+							<li class="main-menu__item ws">
+								<a href="https://wa.me/59176768465?text=Mensaje%20por%20defecto" target="_blank" class="btn-whatsapp">
+									<img class="icon" src="assets/img/icons/whatsapp.svg" alt="whatsapp">
+									<span class="text">¿Necesitas ayuda?<span>76768465</span></span>
+								</a>
+							</li>
 						</ul>
 						<!-- Botón whatsapp -->
 						<a href="https://wa.me/59176768465?text=Mensaje%20por%20defecto" target="_blank" class="btn-whatsapp">
@@ -66,7 +72,8 @@
 						</div>
 					</div>
 					<div class="wrap-image">
-						<img src="assets/img/woman.png" alt="woman">
+						<img src="assets/img/woman.png" alt="woman" class="img-desktop">
+						<img src="assets/img/woman-mobile.png" alt="woman" class="img-mobile">
 					</div>
 				</div>
 			</div>
@@ -274,11 +281,11 @@
 					disableOnInteraction: true,
 				},
 				breakpoints: {
-					900: {
-						slidesPerView: 3,
-					},
-					650: {
+					850: {
 						slidesPerView: 2,
+					},
+					550: {
+						slidesPerView: 1,
 					}
 				}
             });
