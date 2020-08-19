@@ -2,6 +2,13 @@
     margin-top: $height-header;
     position: relative;
 
+    @include to(md){
+        margin-top: $height-header-tablet;
+    }
+    @include to(m){
+        margin-top: $height-header-mobile;
+    }
+
     &:before{
         content: "";
         background-image: url("../img/partials/partial-1.svg");
@@ -15,6 +22,10 @@
         width: 100%;
         max-height: 150px;
         max-width: 120px;
+
+        @include to(l){
+            opacity: 0.5;
+        }
     }
     &:after{
         content: "";
@@ -30,28 +41,57 @@
         max-height: 120px;
         max-width: 50px;
         opacity: 0.3;
+
+        @include to(850px){
+            display: none;
+        }
     }
 
     .main-wrap{
         padding: 100px 0 80px 0;
+
+        @include to(850px){
+            padding: 80px 0 60px 0;
+        }
 
         .container{
             .item{
                 display: flex;
                 justify-content: space-between;
 
+                @include to(850px){
+                    flex-direction: column;
+                }
+
                 .wrap-form{
                     width: 100%;
                     max-width: 450px;
                     position: relative;
+                    z-index: 3;
+
+                    @include fromTo(850px,l){
+                        padding-right: 40px;
+                    }
+                    @include to(850px){
+                        margin: 0 auto;
+                    }
 
                     .title{
                         font-size: 38px;
                         color: $fifth-color;
+
+                        @include to(850px){
+                            text-align: center;
+                            font-size: 30px;
+                        }
                     }
                     .subtitle{
                         color: $fifth-color;
                         margin: 15px 0 20px 0;
+
+                        @include to(850px){
+                            text-align: center;
+                        }
 
                         span{
                             font-weight: 600;
@@ -104,9 +144,18 @@
                     width: 100%;
                     max-width: 450px;
 
+                    @include to(850px){
+                        margin: 0 auto;
+                        margin-top: 40px;
+                    }
+
                     .list{
                         display: flex;
                         justify-content: space-between;
+
+                        @include to(m){
+                            flex-direction: column;
+                        }
 
                         .icon{
                             position: relative;
@@ -114,11 +163,24 @@
                             margin: 0 10px;
                             cursor: pointer;
 
+                            @include fromTo(850px, l){
+                                margin: 0 5px;
+                            }
+                            @include to(m){
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                            }
+
                             &:before{
                                 font-family: 'Flaticon';
                                 color: $first-color;
                                 font-size: 35px;
                                 transition: all .3s;
+
+                                @include to(m){
+                                    font-size: 30px;
+                                }
                             }
 
                             &:hover{
@@ -145,11 +207,20 @@
                             .text{
                                 display: block;
                                 color: $fifth-color;
+
+                                @include to(m){
+                                    padding-left: 10px;
+                                }
                             }
                         }
                     }
                     .wrap-image{
                         margin-top: 30px;
+
+                        @include to(850px){
+                            max-width: 350px;
+                            margin: 30px auto 0 auto;
+                        }
                     }
                 }
             }

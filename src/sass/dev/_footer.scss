@@ -47,6 +47,10 @@
                     padding-bottom: 12px;
                     position: relative;
 
+                    @include to(m){
+                        font-size: 22px;
+                    }
+
                     &:before{
                         content: "";
                         position: absolute;

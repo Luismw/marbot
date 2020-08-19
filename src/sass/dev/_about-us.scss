@@ -2,10 +2,21 @@
     .main-wrap{
         margin-top: $height-header;
 
+        @include to(md){
+            margin-top: $height-header-tablet;
+        }
+        @include to(m){
+            margin-top: $height-header-mobile;
+        }
+
         .about{
-            padding: 80px 0 60px 0;
+            padding: 80px 1em 60px 1em;
             max-width: 900px;
             margin: 0 auto;
+
+            @include to(md){
+                padding: 60px 1em;
+            }
 
             .title{
                 text-align: center;
@@ -14,6 +25,13 @@
                 font-size: 38px;
                 color: $fifth-color;
                 font-weight: 600;
+
+                @include to(md){
+                    font-size: 30px;
+                }
+                @include to(m){
+                    font-size: 26px;
+                }
 
                 &:before{
                     content: "";
@@ -35,6 +53,10 @@
             padding: 40px 0 80px 0;
             position: relative;
 
+            @include to(md){
+                padding: 10px 0 40px 0;
+            }
+
             &:before{
                 content: "";
                 background-image: url("../img/partials/partial-3.png");
@@ -55,11 +77,23 @@
                     justify-content: space-between;
                     align-items: center;
                     position: relative;
+                    z-index: 5;
+
+                    @include to(850px){
+                        flex-direction: column-reverse;
+                    }
 
                     .wrap-image{
                         width: 100%;
                         max-width: 500px;
                         position: relative;
+
+                        @include to(l){
+                            max-width: 400px;
+                        }
+                        @include to(850px){
+                            margin-top: 30px;
+                        }
 
                         &:before{
                             content: "";
@@ -70,11 +104,20 @@
                             background-color: $first-color;
                             bottom: -16px;
                             right: -16px;
+
+                            @include to(m){
+                                bottom: -10px;
+                                right: -10px;
+                            }
                         }
                         
                     }
                     .copy{
                         padding-left: 50px;
+
+                        @include to(850px){
+                            padding-left: 0;
+                        }
 
                         .title{
                             font-size: 35px;
@@ -82,15 +125,44 @@
                             max-width: 450px;
                             font-weight: 600;
 
+                            @include to(l){
+                                font-size: 28px;
+                                max-width: 400px;
+                            }
+                            @include to(850px){
+                                max-width: 100%;
+                            }
+                            @include to(md){
+                                font-size: 26px;
+                            }
+                            @include to(360px){
+                                font-size: 25px;
+                            }
+
                             span{
                                 display: block;
                                 font-size: 40px;
+
+                                @include to(l){
+                                    font-size: 32px;
+                                }
+                                @include to(md){
+                                    display: inline;
+                                    font-size: 26px;
+                                }
+                                @include to(360px){
+                                    font-size: 25px;
+                                }
                             }
                         }
                         .wrap-description{
                             max-width: 550px;
                             margin-top: 30px;
                             padding-right: 1em;
+
+                            @include to(md){
+                                padding-right: 0;
+                            }
 
                             p{
                                 margin-bottom: 15px;
@@ -118,9 +190,13 @@
             }
         }
         .relationship-building{
-            padding: 40px 0 60px 0;
+            padding: 40px 1em 60px 1em;
             max-width: 650px;
             margin: 0 auto;
+
+            @include to(md){
+                padding: 30px 1em;
+            }
 
             .title{
                 text-align: center;
@@ -129,6 +205,13 @@
                 font-size: 35px;
                 color: $fifth-color;
                 font-weight: 600;
+
+                @include to(md){
+                    font-size: 30px;
+                }
+                @include to(m){
+                    font-size: 24px;
+                }
 
                 &:before{
                     content: "";
@@ -148,6 +231,10 @@
         }
         .recent-works{
             padding: 50px 0 80px 0;
+
+            @include to(md){
+                padding: 40px 0 20px 0;
+            }
         }
     }
 }

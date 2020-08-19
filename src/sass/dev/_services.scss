@@ -2,8 +2,19 @@
     .main-wrap{
         margin-top: $height-header;
 
+        @include to(md){
+            margin-top: $height-header-tablet;
+        }
+        @include to(m){
+            margin-top: $height-header-mobile;
+        }
+
         .our-services{
             padding: 80px 0 80px 0;
+
+            @include to(md){
+                padding: 60px 0;
+            }
 
             .container{
                 .item{
@@ -14,6 +25,13 @@
                         font-size: 35px;
                         color: $fifth-color;
                         font-weight: 600;
+
+                        @include to(md){
+                            font-size: 30px;
+                        }
+                        @include to(m){
+                            font-size: 26px;
+                        }
 
                         &:before{
                             content: "";
@@ -30,6 +48,10 @@
                         max-width: 900px;
                         text-align: center;
                         margin: 50px auto 50px auto;
+
+                        @include to(850px){
+                            margin: 40px auto 30px auto;
+                        }
                     }
                     .grid{
                         display: flex;
@@ -39,6 +61,16 @@
                             width: calc(33.33% - 20px);
                             margin: 10px;
                             background-color: $plomo;
+
+                            @include to(850px){
+                                width: calc(50% - 10px);
+                                margin: 5px;
+                            }
+                            @include to(m){
+                                width: 100%;
+                                max-width: 350px;
+                                margin: 5px auto;
+                            }
 
                             .image{
                                 width: 100%;
@@ -72,6 +104,11 @@
         }
         .form-project{
             padding: 0 0 50px 0;
+
+            @include to(m){
+                padding: 0;
+            }
+
             .container{
                 position: relative;
 
@@ -88,6 +125,9 @@
                     max-width: 80px;
                 }
                 .item{
+                    position: relative;
+                    z-index: 5;
+
                     > .title{
                         text-align: center;
                         position: relative;
@@ -96,6 +136,13 @@
                         margin-bottom: 40px;
                         color: $fifth-color;
                         font-weight: 600;
+
+                        @include to(md){
+                            font-size: 30px;
+                        }
+                        @include to(m){
+                            font-size: 26px;
+                        }
 
                         &:before{
                             content: "";
@@ -151,9 +198,20 @@
                             display: flex;
                             margin-bottom: 15px;
 
+                            @include to(m){
+                                flex-direction: column;
+                                margin-bottom: 0;
+                            }
+
                             .input-wrap{
                                 width: calc(50% - 10px);
                                 margin: 5px;
+
+                                @include to(m){
+                                    width: auto;
+                                    margin: 0 5px !important;
+                                    margin-bottom: 15px !important;
+                                }
                             }
                         }
                     }

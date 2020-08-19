@@ -1,8 +1,19 @@
 .single{
     margin-top: $height-header;
 
+    @include to(md){
+        margin-top: $height-header-tablet;
+    }
+    @include to(m){
+        margin-top: $height-header-mobile;
+    }
+
     .content{
         padding: 80px 0;
+
+        @include to(l){
+            padding: 60px 0 20px 0;
+        }
 
         .container{
             .item{
@@ -15,6 +26,11 @@
                     width: 100%;
                     margin-right: 80px;
                     max-width: 790px;
+
+                    @include to(l){
+                        max-width: 100%;
+                        margin-right: 0;
+                    }
 
                     &__poster{
                         img{
@@ -245,9 +261,16 @@
                         padding: 25px;
                         display: flex;
 
+                        @include to(m){
+                            flex-direction: column;
+                            align-items: center;
+                            padding: 25px 15px;
+                        }
+
                         .wrap-image{
                             border-radius: 50%;
                             width: 100%;
+                            min-width: 85px;
                             max-width: 85px;
                             height: 100vh;
                             max-height: 85px;
@@ -263,6 +286,12 @@
                             padding-left: 15px;
                             padding-top: 5px;
 
+                            @include to(m){
+                                text-align: center;
+                                padding-left: 0;
+                                padding-top: 15px;
+                            }
+
                             .name{
                                 color: $fifth-color;
                                 font-size: 17px;
@@ -277,6 +306,10 @@
                 .sidebar{
                     width: 100%;
                     max-width: 330px;
+
+                    @include to(l){
+                        display: none;
+                    }
 
                     .widget{
                         background-color: $plomo;
@@ -452,6 +485,13 @@
                     margin-top: 50px;
                     max-width: 760px;
 
+                    @include to(1200px){
+                        max-width: 700px;
+                    }
+                    @include to(l){
+                        max-width: 100%;
+                    }
+
                     > .title{
                         font-weight: 600;
                         font-size: 20px;
@@ -466,9 +506,15 @@
                                 display: flex;
                                 border-bottom: 1px solid rgba($text,.1);
 
+                                @include to(m){
+                                    flex-direction: column;
+                                    padding: 25px 10px;
+                                }
+
                                 .wrap-image{
                                     border-radius: 50%;
                                     width: 100%;
+                                    min-width: 50px;
                                     max-width: 50px;
                                     height: 100vh;
                                     max-height: 50px;
@@ -483,6 +529,11 @@
                                 .info{
                                     padding-left: 15px;
                                     padding-top: 5px;
+
+                                    @include to(m){
+                                        padding-left: 0;
+                                        padding-top: 15px;
+                                    }
 
                                     .name{
                                         color: $fifth-color;
@@ -516,6 +567,11 @@
 
                             .children{
                                 padding-left: 85px;
+
+                                @include to(600px){
+                                    padding-left: 20px;
+                                    border-left: 1px solid rgba($text,.1);
+                                }
                             }
                         }
                     }
@@ -523,6 +579,10 @@
                 .form-comment{
                     max-width: 760px;
                     margin-top: 30px;
+
+                    @include to(1200px){
+                        max-width: 700px;
+                    }
 
                     > .title{
                         position: relative;
