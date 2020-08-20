@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/style.css?v=1.1">
 		<link rel="shortcut icon" href="assets/img/logos/iconos/favicon.png">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 	</head>
 	<body class="about-us">
 		 
@@ -42,6 +43,12 @@
 							<li class="main-menu__item">
 								<a href="blog.html" class="link">Blog</a>
 							</li>
+							<li class="main-menu__item ws">
+								<a href="https://wa.me/59176768465?text=Mensaje%20por%20defecto" target="_blank" class="btn-whatsapp">
+									<img class="icon" src="assets/img/icons/whatsapp.svg" alt="whatsapp">
+									<span class="text">¿Necesitas ayuda?<span>76768465</span></span>
+								</a>
+							</li>
 						</ul>
 						<!-- Botón whatsapp -->
 						<a href="https://wa.me/59176768465?text=Mensaje%20por%20defecto" target="_blank" class="btn-whatsapp">
@@ -57,18 +64,18 @@
 		<main class="main-wrap">
 			<!-- Bloque: Acerca de nosotros -->
 			<div class="about">
-                <h2 class="title">Acerca de nosotros</h2>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
+                <h2 class="title wow fadeInDown">Acerca de nosotros</h2>
+                <p class="description wow fadeInUp">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
             </div>
 
             <!-- Sección: Transformación digital -->
 			<div class="digital-transformation">
 				<div class="container">
 					<div class="item">
-						<div class="wrap-image">
+						<div class="wrap-image wow fadeInLeft">
 							<img src="assets/img/transformacion-digital.jpg" alt="transformacion digital">
 						</div>
-						<div class="copy">
+						<div class="copy wow fadeInRight">
 							<h2 class="title">Transformamos empresas para adaptarlas a la <span class="first-color">era digital</span></h2>
 							<div class="wrap-description">
 								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia inventore earum velit nemo, perspiciatis, explicabo possimus.</p>
@@ -81,16 +88,16 @@
 
             <!-- Bloque: Construcción de relaciones -->
 			<div class="relationship-building">
-                <h2 class="title">Creemos en la construcción de relaciones duraderas</h2>
-                <p class="description">Nos hemos conectado con clientes increíbles para permitirles todo lo que la revolución digital tiene para ofrecer. Ver a nuestros clientes apasionados por sus ideas nos hace querer entregar aplicaciones móviles y sitios web extremadamente exitosos. Y eso es lo que nos esforzamos por hacer todos los días.</p>
+                <h2 class="title wow fadeInDown">Creemos en la construcción de relaciones duraderas</h2>
+                <p class="description wow fadeInUp">Nos hemos conectado con clientes increíbles para permitirles todo lo que la revolución digital tiene para ofrecer. Ver a nuestros clientes apasionados por sus ideas nos hace querer entregar aplicaciones móviles y sitios web extremadamente exitosos. Y eso es lo que nos esforzamos por hacer todos los días.</p>
             </div>
 
             <!-- Sección: Trabajos recientes -->
 			<div class="recent-works">
 				<div class="container">
 					<div class="item">
-						<h2 class="title">Trabajos recientes</h2>
-						<div class="swiper-container">
+						<h2 class="title wow fadeInDown">Trabajos recientes</h2>
+						<div class="swiper-container wow fadeInUp">
 							<div class="arrows">
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
@@ -136,7 +143,7 @@
 		<!-- Main Footer -->
 		<footer class="main-footer">
 			<div class="widgets container">
-				<div class="item">
+				<div class="item wow fadeInUp">
 					<div class="widget marbot">
 						<img src="assets/img/logos/logo-marbot.png" alt="marbot" class="logo">
 						<p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia inventore earum  velit nemo, perspiciatis, explicabo possimus.</p>
@@ -173,9 +180,10 @@
 
 		<!-- JS -->
 		<script src="assets/js/jquery-min.js"></script>
-        <script src="assets/js/custom/main-min.js"></script>
         <script src="assets/js/swiper-min.js"></script>
 		<script src="assets/js/fancybox-min.js"></script>
+		<script src="assets/js/wow-min.js"></script>
+        <script src="assets/js/custom/main-min.js"></script>
 		<script>
 			//Carousel de trabajos recientes
             var swiper = new Swiper('.recent-works .swiper-container', {

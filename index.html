@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/style.css?v=1.1">
 		<link rel="shortcut icon" href="assets/img/logos/iconos/favicon.png">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 	</head>
 	<body class="home">
 		 
@@ -63,7 +64,7 @@
 		<div class="main-banner">
 			<div class="container">
 				<div class="item">
-					<div class="copy">
+					<div class="copy wow fadeInLeft">
 						<h1 class="title">Llevamos tu negocio a la era <span class="first-color">digital</span></h1>
 						<p class="description">Como empresa especializada en soluciones tecnológicas, te ofrecemos servicios acorde a tus necesidades y con resultados efectivos que impulsarán tu negocio.</p>
 						<div class="buttons">
@@ -71,7 +72,7 @@
 							<a href="servicios.html" class="btn see-services">Ver Servicios</a>
 						</div>
 					</div>
-					<div class="wrap-image">
+					<div class="wrap-image wow fadeInRight">
 						<img src="assets/img/woman.png" alt="woman" class="img-desktop">
 						<img src="assets/img/woman-mobile.png" alt="woman" class="img-mobile">
 					</div>
@@ -85,8 +86,8 @@
 			<div class="services">
 				<div class="container">
 					<div class="item">
-						<h2 class="title">¿Qué estás buscando?</h2>
-						<div class="grid">
+						<h2 class="title wow fadeIn">¿Qué estás buscando?</h2>
+						<div class="grid wow fadeInUp">
 							<a class="grid__item" href="desarrollo-de-aplicaciones-web.html">
 								<img src="assets/img/services-icons/desarrollo-de-aplicaciones-web.svg" alt="Desarrollo de aplicaciones web" class="icon">
 								<h3 class="title">Desarrollo de Aplicaciones <br> Web</h3>
@@ -118,8 +119,8 @@
 
 			<!-- barra separadora - oferta -->
 			<div class="bar">
-				<h2 class="title">Tenemos una gran oferta para ti</h2>
-				<span class="btn-form">Ver oferta</span>
+				<h2 class="title wow fadeInDown">Tenemos una gran oferta para ti</h2>
+				<span class="btn-form wow fadeInUp">Ver oferta</span>
 				
 				<!-- Contenido para la modal del formulario -->
 				<div class="modal-form">
@@ -153,8 +154,8 @@
 			<div class="recent-works">
 				<div class="container">
 					<div class="item">
-						<h2 class="title">Trabajos recientes</h2>
-						<div class="swiper-container">
+						<h2 class="title wow fadeInDown">Trabajos recientes</h2>
+						<div class="swiper-container wow fadeInUp">
 							<div class="arrows">
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
@@ -200,10 +201,10 @@
 			<div class="digital-transformation">
 				<div class="container">
 					<div class="item">
-						<div class="wrap-image">
+						<div class="wrap-image wow fadeInLeft">
 							<img src="assets/img/transformacion-digital.jpg" alt="transformacion digital">
 						</div>
-						<div class="copy">
+						<div class="copy wow fadeInRight">
 							<h2 class="title">Transformamos empresas para adaptarlas a la <span class="first-color">era digital</span></h2>
 							<div class="wrap-description">
 								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia inventore earum velit nemo, perspiciatis, explicabo possimus.</p>
@@ -218,7 +219,7 @@
 		<!-- Main Footer -->
 		<footer class="main-footer">
 			<div class="widgets container">
-				<div class="item">
+				<div class="item wow fadeInUp">
 					<div class="widget marbot">
 						<img src="assets/img/logos/logo-marbot.png" alt="marbot" class="logo">
 						<p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia inventore earum  velit nemo, perspiciatis, explicabo possimus.</p>
@@ -255,9 +256,10 @@
 
 		<!-- JS -->
 		<script src="assets/js/jquery-min.js"></script>
-		<script src="assets/js/custom/main-min.js"></script>
 		<script src="assets/js/swiper-min.js"></script>
 		<script src="assets/js/fancybox-min.js"></script>
+		<script src="assets/js/wow-min.js"></script>
+		<script src="assets/js/custom/main-min.js"></script>
 		<script>
 			//Modal formulario
 			$(".btn-form").on("click", function(){

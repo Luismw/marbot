@@ -7,6 +7,10 @@
         background-repeat: no-repeat;
         background-size: contain;
 
+        @include to(1400px){
+            background-size: cover;
+        }
+
         @include to(md){
             margin-top: $height-header-tablet;
         }
@@ -90,18 +94,45 @@
                 align-items: center;
                 justify-content: space-between;
 
+                @include to(md){
+                    flex-direction: column;
+                }
+
                 .copy{
                     max-width: 550px;
                     position: relative;
+                    padding-right: 20px;
+
+                    @include to(l){
+                        max-width: 500px;
+                    }
+                    @include to(md){
+                        margin: 0 auto;
+                        padding-right: 0;
+                        text-align: center;
+                        max-width: 430px;
+                        padding-bottom: 30px;
+                    }
 
                     .title{
                         font-size: 45px;
                         font-weight: 600;
                         color: $blanco;
+
+                        @include to(l){
+                            font-size: 35px;
+                        }
+                        @include to(m){
+                            font-size: 30px;
+                        }
                     }
                     .description{
                         margin: 40px 0 0 0;
                         color: $blanco;
+
+                        @include to(md){
+                            margin-top: 30px;
+                        }
                     }
                 }
                 .wrap-form{
@@ -109,6 +140,10 @@
                     position: relative;
                     background-color: $blanco;
                     padding: 30px;
+
+                    @include to(m){
+                        padding: 30px 15px;
+                    }
 
                     .title{
                         text-align: center;
@@ -118,6 +153,10 @@
                         line-height: 1.1;
                         color: $fifth-color;
                         font-weight: 400;
+
+                        @include to(m){
+                            font-size: 20px;
+                        }
 
                         span{
                             font-weight: 600;
@@ -172,6 +211,13 @@
     .main-wrap{
         padding: 100px 0 100px 0;
 
+        @include to(md){
+            padding: 60px 0;
+        }
+        @include to(m){
+            padding: 60px 0 20px 0;
+        }
+
         .container{
             .item{
                 .flex{
@@ -180,36 +226,57 @@
                     justify-content: space-between;
                     padding-bottom: 120px;
 
+                    @include to(l){
+                        padding-bottom: 90px;
+                    }
+                    @include to(md){
+                        flex-direction: column;
+                        padding-bottom: 60px;
+                    }
                     &:last-child{
                         padding-bottom: 0;
                     }
 
                     &.image-left{
+
                         .wrap-image{
                             order: 1;
 
                             &:before{
                                 bottom: -16px;
                                 right: -16px;
+
+                                @include to(m){
+                                    bottom: -10px;
+                                    right: -10px;
+                                }
                             }
                         }
                         .copy{
                             order: 2;
                             margin-left: auto;
+                            padding-left: 40px;
                         }
                     }
                     &.image-right{
+
                         .wrap-image{
                             order: 2;
 
                             &:before{
                                 bottom: -16px;
                                 left: -16px;
+
+                                @include to(m){
+                                    bottom: -10px;
+                                    left: -10px;
+                                }
                             }
                         }
                         .copy{
                             order: 1;
                             margin-right: auto;
+                            padding-right: 40px;
                         }
                     }
 
@@ -217,7 +284,13 @@
                         width: 100%;
                         max-width: 480px;
                         position: relative;
-                        margin-right: 20px;
+
+                        @include to(l){
+                            max-width: 400px;
+                        }
+                        @include to(md){
+                            order: 2 !important;
+                        }
 
                         &.box-first-color{
                             &:before{
@@ -240,10 +313,20 @@
                     .copy{
                         max-width: 550px;
 
+                        @include to(md){
+                            order: 1 !important;
+                            padding: 0 0 20px 0!important;
+                            max-width: 100%;
+                        }
+
                         .title{
                             color: $fifth-color;
                             font-weight: 600;
                             font-size: 28px;
+
+                            @include to(850px){
+                                font-size: 25px;
+                            }
                         }
                         .description{
                             margin: 30px 0;

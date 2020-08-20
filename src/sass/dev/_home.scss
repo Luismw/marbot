@@ -394,7 +394,7 @@
             
                         @include from(m){
                             position: absolute;
-                            top: -15px;
+                            top: -8px;
                             right: 50px;
                         }
             
@@ -412,6 +412,11 @@
                         background-color: $blanco;
                         padding: 30px;
                         border-radius: 10px;
+
+                        @include to(md){
+                            max-height: 340px;
+                            overflow-y: auto;
+                        }
     
                         .title{
                             text-align: center;
